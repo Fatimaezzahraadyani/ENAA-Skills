@@ -41,7 +41,4 @@ public class CompetenceService {
     public void deleteCompetence(Long id) {
         competenceRepository.deleteById(id);
     }
-
-
-
 }
