@@ -1,15 +1,10 @@
 package com.enaaskills.enaaskills.CompetenceService.Dto;
 
-import java.util.List;
-
-public class CompetenceDto {
+public class SousCompetenceDto {
     private Long id;
     private String name;
     private String description;
-
-    private List<SousCompetenceDto> sousCompetences;
-
-    private boolean estValid;
+    private boolean estValide;
 
     public Long getId() {
         return id;
@@ -35,19 +30,11 @@ public class CompetenceDto {
         this.description = description;
     }
 
-    public List<SousCompetenceDto> getSousCompetences() {
-        return sousCompetences;
+    public boolean isEstValide() {
+        return estValide;
     }
 
-    public void setSousCompetences(List<SousCompetenceDto> sousCompetences) {
-        this.sousCompetences = sousCompetences;
-    }
-
-    public boolean isEstValid() {
-        return estValid;
-    }
-
-    public void setEstValid(boolean estValid) {
-        this.estValid = estValid;
+    public void setEstValide(boolean estValide) {
+        this.estValide = estValide;
     }
 }

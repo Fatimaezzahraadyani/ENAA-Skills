@@ -15,6 +15,7 @@ public class SousCompetence {
 
     private String nom;
     private String description;
+    private boolean estValide = false;
 
     @ManyToOne
     @JoinColumn(name = "competence_id")
@@ -52,5 +53,14 @@ public class SousCompetence {
 
     public void setCompetence(Competence competence) {
         this.competence = competence;
+    }
+
+
+    public boolean isEstValide() {
+        return estValide;
+    }
+
+    public void setEstValide(boolean estValide) {
+        this.estValide = estValide;
     }
 }
