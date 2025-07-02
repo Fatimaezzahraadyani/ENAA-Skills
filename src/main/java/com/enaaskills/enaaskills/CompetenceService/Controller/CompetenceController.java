@@ -8,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/Competences")
@@ -46,7 +45,6 @@ public class CompetenceController {
     public ResponseEntity<Competence> updateCompetence(@PathVariable Long id, @RequestBody Competence competence) {
         Competence updated = competenceService.updateCompetence(id, competence);
         return ResponseEntity.ok(updated);
-
     }
 
     @DeleteMapping("/delete/{id}")

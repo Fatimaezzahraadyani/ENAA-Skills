@@ -1,6 +1,8 @@
 package com.enaaskills.enaaskills.CompetenceService.Model;
+import com.enaaskills.enaaskills.CompetenceService.Model.SousCompetence;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -16,7 +18,8 @@ public class Competence {
     private String description;
 
     @OneToMany(mappedBy = "competence", cascade = CascadeType.ALL)
-    private List<Competence> SousCompetences;
+    @JsonManagedReference
+    private List<SousCompetence> sousCompetences;
 
 
     public Long getId() {
@@ -43,12 +46,12 @@ public class Competence {
         this.description = description;
     }
 
-    public List<Competence> getSousCompetences() {
-        return SousCompetences;
+    public List<SousCompetence> getSousCompetences() {
+        return sousCompetences;
     }
 
-    public void setSousCompetences(List<Competence> sousCompetences) {
-        SousCompetences = sousCompetences;
+    public void setSousCompetences(List<SousCompetence> sousCompetences) {
+        this.sousCompetences = sousCompetences;
     }
 
     public void setCompetence(Competence competence) {}

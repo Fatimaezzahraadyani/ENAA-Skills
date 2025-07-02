@@ -1,6 +1,8 @@
 package com.enaaskills.enaaskills.CompetenceService.Model;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -16,7 +18,9 @@ public class SousCompetence {
 
     @ManyToOne
     @JoinColumn(name = "competence_id")
+    @JsonBackReference
     private Competence competence;
+
 
     public Long getId() {
         return id;
