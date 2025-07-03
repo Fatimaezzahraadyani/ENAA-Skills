@@ -1,6 +1,7 @@
 package com.enaaskills.enaaskills.CompetenceService.Controller;
 
 
+import com.enaaskills.enaaskills.CompetenceService.Dto.CompetenceDto;
 import com.enaaskills.enaaskills.CompetenceService.Model.SousCompetence;
 import com.enaaskills.enaaskills.CompetenceService.Service.SousCompetenceService;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,7 +20,7 @@ public class SousCompetenceController {
     }
 
     @PutMapping("/{id}/valider")
-    public SousCompetence validerSousCompetence(@PathVariable Long id) {
+    public CompetenceDto validerSousCompetence(@PathVariable Long id) {
         return sousCompetenceService.validerSousCompetence(id);
     }
 }
