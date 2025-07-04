@@ -15,7 +15,7 @@ public class CompetenceService {
     private final CompetenceRepository competenceRepository;
     private final CompetenceMapper competenceMapper;
 
-    public CompetenceService (CompetenceRepository competenceRepository, CompetenceRepository competenceRepository1, CompetenceMapper competenceMapper) {
+    public CompetenceService (CompetenceRepository competenceRepository, CompetenceMapper competenceMapper) {
         this.competenceRepository = competenceRepository;
         this.competenceMapper = competenceMapper;
     }
